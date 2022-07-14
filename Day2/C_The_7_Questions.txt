@@ -1,0 +1,59 @@
+1) Find the remainder when 4596 is divided by 10.
+
+System.out.println(4596%10);
+
+------------------------------------------------------------------------------------------------
+
+2) Store the value 100 in x variable of int data type and then print x.
+
+int x;
+x = 100;
+System.out.println(x);
+
+------------------------------------------------------------------------------------------------
+
+3) Store the value 235 in y variable of int data type and then print y+10
+
+int y;
+y = 235;
+System.out.println(y+10);
+
+------------------------------------------------------------------------------------------------
+
+4) Store values 165, 84 in x and y variable of int data type and print x+y, x-y, x*y, x/y.
+
+int x,y;
+x = 165;
+y = 84;
+System.out.println(x+y);
+System.out.println(x-y);
+System.out.println(x*y);
+System.out.println(x/y);
+
+------------------------------------------------------------------------------------------------
+
+5) Store values 20, 30, 40 in the variable x, y, z each of int data type and print x+y-z.
+
+int x,y,z;
+x = 20;
+y = 30;
+z = 40;
+System.out.println(x+y-z);
+
+------------------------------------------------------------------------------------------------
+
+6) Remove the last digit of a given number. Say 45983
+
+int num;
+num = 45983;
+System.out.println(num/10);
+
+------------------------------------------------------------------------------------------------
+
+7) Find the last digit of a given number. Say 45983
+
+int num;
+num = 45983;
+System.out.println(num%10);
+
+------------------------------------------------------------------------------------------------
