@@ -1,5 +1,5 @@
 import java.util.*;
-public class B_NumsFromxTon {
+public class C_NumsFrom1Ton {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);

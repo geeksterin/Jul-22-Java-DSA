@@ -1,5 +1,5 @@
 import java.util.*;
-public class C_TableOfNumberN {
+public class E_TableOfNumberN {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);

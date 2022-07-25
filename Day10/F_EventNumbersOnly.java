@@ -1,5 +1,5 @@
 import java.util.*;
-public class D_EventNumbersOnly {
+public class F_EventNumbersOnly {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
