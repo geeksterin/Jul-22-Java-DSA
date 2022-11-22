@@ -19,12 +19,10 @@ public class ParameterizedConstructor {
 
         // 2. Parameterized Constructor
         Hero( int initialStrength, int initialLevel, ArrayList<String> initalWeapons, String initialDefaultWeapon) {
-
             strength = initialStrength;
             level = initialLevel;
             weapons = initalWeapons;
             defaultWeapon = initialDefaultWeapon;
-
         }
         
     }
