@@ -6,7 +6,7 @@ public class Game {
 
         int strength;
         int level;
-        ArrayList<String> weapons = new ArrayList<String>();
+        ArrayList<String> weapons;
         String defaultWeapon;
     
         // 1. NO-ARGS CONSTRUCTOR
