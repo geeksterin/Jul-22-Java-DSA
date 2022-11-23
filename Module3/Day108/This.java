@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class GettersAndSetters {
+public class This {
 
     public static class YoutubeVideo {
 
@@ -8,38 +8,39 @@ public class GettersAndSetters {
         int noOfViews, noOfLikes;
         ArrayList<String> comments;
         boolean containsCaptions;
-    
 
         // Setters
 
-        void setName( String newName ) {
-            name = newName;
+        // void setName( String newName ) {
+        //     name = newName;
+        // }
+        void setName( String name ) {
+            this.name = name;
         }
-
-        void setNoOfViews(int views) {
-            noOfViews = views;
+        void setNoOfViews(int noOfViews) {
+            this.noOfViews = noOfViews;
         }
-        void setNoOfLikes(int likes) {
-            noOfLikes = likes;
+        void setNoOfLikes(int noOfLikes) {
+            this.noOfLikes = noOfLikes;
         }
-        void setComments(ArrayList<String> newComments) {
-            comments = newComments;
+        void setComments(ArrayList<String> comments) {
+            this.comments = comments;
         }
 
 
         // Getters 
 
         String getName() {
-            return name;
+            return this.name;
         }
         int getNoOfViews() {
-            return noOfViews;
+            return this.noOfViews;
         }
         int getNoOfLikes() {
-            return noOfLikes;
+            return this.noOfLikes;
         }
         ArrayList<String> getComments() {
-            return comments;
+            return this.comments;
         }
 
     }
@@ -52,21 +53,11 @@ public class GettersAndSetters {
         comms.add("Good");
         comms.add("Nice");
 
-        // INSTEAD OF DOING THIS
-        // songVideo.name = "Kesariya"; 
-
-        // DO THIS
         songVideo.setName("Kesariya");
         songVideo.setNoOfLikes(5000000);
         songVideo.setNoOfViews(45000000);
         songVideo.setComments(comms);
         
-        // ----------------------------------------------------------------
-
-        // INSTEAD OF DOING THIS
-        // System.out.println("Name of Video : "+songVideo.name);
-        
-        // DO THIS
         System.out.println("Name of Video : "+songVideo.getName());
         System.out.println("Views : "+songVideo.getNoOfViews());
         System.out.println("Likes : "+songVideo.getNoOfLikes());
