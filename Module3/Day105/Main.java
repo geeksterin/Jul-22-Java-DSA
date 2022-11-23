@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
 
-    public static class YoutubeVideo {
+    private static class YoutubeVideo {
 
         String name;
         int noOfViews, noOfLikes;
