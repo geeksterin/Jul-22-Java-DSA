@@ -7,9 +7,11 @@ public class FunctionOverriding {
         int length, breadth;
 
         float getArea() {
+            System.out.println("getArea of Rect called.");
             return this.length*this.breadth;
         }
         float getPerimeter() {
+            System.out.println("getPeri of Rect called.");
             return 2*(this.length+this.breadth);
         }
 
@@ -22,9 +24,11 @@ public class FunctionOverriding {
         int side;
 
         float getArea() {
+            System.out.println("getArea of Sq called.");
             return this.side*this.side;
         }
         float getPerimeter() {
+            System.out.println("getPeri of Sq called.");
             return 4*this.side;
         }
 

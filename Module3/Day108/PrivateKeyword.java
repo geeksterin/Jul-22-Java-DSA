@@ -50,7 +50,7 @@ public class PrivateKeyword {
         }
 
         void setPhoneModel(String newModelNo) {
-            // phone.modelNo = newModelNo;
+            phone.modelNo = newModelNo;
             phone.setModelNo(newModelNo);
         }
 
