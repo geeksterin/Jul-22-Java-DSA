@@ -3,7 +3,6 @@ class Device {
     String modelNo;
 
     String getModelNoDevice() {
-        System.out.println("fn call of Device.");
         return this.modelNo;
     }
 
@@ -15,9 +14,9 @@ class Phone extends Device {
 
     Phone(String modelNo) {
         this.modelNo = modelNo;
-        super.modelNo = modelNo;
+        super.modelNo = modelNo+"DVD";
     }
-    String getModelNoPhone() {
+    String getModelNoPhone() {       
         return this.modelNo;
     }
 
@@ -28,7 +27,7 @@ public class SuperKeywordForAttributes {
     public static void main(String[] args) {
 
         System.out.println("\n");
-         
+        
         Phone iphone = new Phone("14Pro");
         
         System.out.println(iphone.getModelNoPhone());
