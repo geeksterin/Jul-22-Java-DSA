@@ -3,7 +3,7 @@ interface P1 {
     abstract void f2();
 }
 interface P2 {    
-    abstract void f2();
+    void f2();
     abstract void f3();
 }
 
