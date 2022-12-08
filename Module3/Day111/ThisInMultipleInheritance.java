@@ -9,6 +9,7 @@ class C extends B {
     void disp() {
         System.out.println("Cx: "+this.x);
         System.out.println("Bx: "+((B)this).x);
+        System.out.println("Bx(using super): "+super.x);
         System.out.println("Ax: "+((A)this).x);
     }
 }
