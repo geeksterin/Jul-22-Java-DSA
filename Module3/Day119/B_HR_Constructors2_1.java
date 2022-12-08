@@ -24,20 +24,9 @@ class Influencer {
     }
 
 }
-class D_HR_ClassObjects2_2 {
+class B_HR_Constructors2_1 {
 
     public static void main( String args[] ) {
-
-        // Influencer RaftaarMusic = new Influencer(
-        //         "Raftaar",
-        //         340,
-        //         400,
-        //         true,
-        //         7,
-        //         200,
-        //         "Rapper",
-        //         'M'
-        // );
 
         Scanner sc = new Scanner(System.in);
 
@@ -47,6 +36,7 @@ class D_HR_ClassObjects2_2 {
         Boolean blue_tick = sc.nextBoolean();
         Integer followers = sc.nextInt();
         Integer following = sc.nextInt();
+        sc.nextLine();
         String category = sc.nextLine();
         Character gender = sc.next().charAt(0);
 

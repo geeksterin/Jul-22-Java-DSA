@@ -23,21 +23,18 @@ class Influencer {
         this.gender = gender;
     }
 
+    public void checkVerified() {
+        if (this.blue_tick) {
+            System.out.println("Already Verified");
+        } else {
+            System.out.println("Needs Verification");
+        }
+    }
+
 }
-class D_HR_ClassObjects2_2 {
+class E_HR_Methods2_2 {
 
     public static void main( String args[] ) {
-
-        // Influencer RaftaarMusic = new Influencer(
-        //         "Raftaar",
-        //         340,
-        //         400,
-        //         true,
-        //         7,
-        //         200,
-        //         "Rapper",
-        //         'M'
-        // );
 
         Scanner sc = new Scanner(System.in);
 
@@ -47,20 +44,12 @@ class D_HR_ClassObjects2_2 {
         Boolean blue_tick = sc.nextBoolean();
         Integer followers = sc.nextInt();
         Integer following = sc.nextInt();
+        sc.nextLine();
         String category = sc.nextLine();
         Character gender = sc.next().charAt(0);
 
         Influencer RaftaarMusic = new Influencer(name, total_posts, total_reels, blue_tick, followers, following, category, gender);
-
-        System.out.println(RaftaarMusic.name);
-        System.out.println(RaftaarMusic.total_posts);
-        System.out.println(RaftaarMusic.total_reels);
-        System.out.println(RaftaarMusic.blue_tick);
-        System.out.println(RaftaarMusic.followers);
-        System.out.println(RaftaarMusic.following);
-        System.out.println(RaftaarMusic.category);
-        System.out.println(RaftaarMusic.gender);
-
+        RaftaarMusic.checkVerified();
 
     }
 

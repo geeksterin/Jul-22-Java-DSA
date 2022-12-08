@@ -23,21 +23,21 @@ class Influencer {
         this.gender = gender;
     }
 
+    public void propDisplay() {
+        System.out.println(this.name);
+        System.out.println(this.total_posts);
+        System.out.println(this.total_reels);
+        System.out.println(this.blue_tick);
+        System.out.println(this.followers);
+        System.out.println(this.following);
+        System.out.println(this.category);
+        System.out.println(this.gender);
+    }
+
 }
-class D_HR_ClassObjects2_2 {
+class D_HR_Methods2_1 {
 
     public static void main( String args[] ) {
-
-        // Influencer RaftaarMusic = new Influencer(
-        //         "Raftaar",
-        //         340,
-        //         400,
-        //         true,
-        //         7,
-        //         200,
-        //         "Rapper",
-        //         'M'
-        // );
 
         Scanner sc = new Scanner(System.in);
 
@@ -47,20 +47,12 @@ class D_HR_ClassObjects2_2 {
         Boolean blue_tick = sc.nextBoolean();
         Integer followers = sc.nextInt();
         Integer following = sc.nextInt();
+        sc.nextLine();
         String category = sc.nextLine();
         Character gender = sc.next().charAt(0);
 
         Influencer RaftaarMusic = new Influencer(name, total_posts, total_reels, blue_tick, followers, following, category, gender);
-
-        System.out.println(RaftaarMusic.name);
-        System.out.println(RaftaarMusic.total_posts);
-        System.out.println(RaftaarMusic.total_reels);
-        System.out.println(RaftaarMusic.blue_tick);
-        System.out.println(RaftaarMusic.followers);
-        System.out.println(RaftaarMusic.following);
-        System.out.println(RaftaarMusic.category);
-        System.out.println(RaftaarMusic.gender);
-
+        RaftaarMusic.propDisplay();
 
     }
 
