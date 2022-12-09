@@ -4,10 +4,11 @@ import java.lang.*;
 
 public class ThrowException {
 
-    public static int divide(int num1, int num2) throws IOException  {
+    public static int divide(int num1, int num2) throws NullPointerException {
 
         if ( num2==0 ) {
-            throw new IOException("Division by zero");
+            throw new NullPointerException("Division by zero");
+            // throw new IOException("Division by zero");
         }
         return num1/num2;
     }
