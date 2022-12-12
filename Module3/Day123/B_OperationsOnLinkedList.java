@@ -1,7 +1,4 @@
 import java.util.* ;
-
-import javax.swing.plaf.synth.SynthSpinnerUI;
-
 import java.io.* ;
 
 class Node {
@@ -20,7 +17,7 @@ class B_OperationsOnLinkedList {
             System.out.println("EMPTY LL :P");
             return;
         }
-        
+
         while ( head!=null ) {
             System.out.print(head.data + ", ");
             head = head.next;
