@@ -91,8 +91,3 @@ class A_LinkedListCreation {
     }
 
 }
-
-
-alias gkstrgit='f(){ cd ~/Documents/Geekster/Jul-22-Java-DSA/ && git add . && git commit -m "$1" && git push origin main;}; f'
-
-''
