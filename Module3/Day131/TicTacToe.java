@@ -60,6 +60,9 @@ class Board {
     void putMarker(int row, int col, char marker) {
         this.matrix[row][col] = marker;
     }
+    char getMarker(int row, int col) {
+        return this.matrix[row][col];
+    }
 
 }
 
@@ -90,7 +93,7 @@ class Game {
         if ( p2Marker==p1Marker ){
             p2Marker = 'O';
         }
-
+        System.out.println("Marker of player 2 will be:  "+p2Marker);
         this.p2 = new Player(p2Name, p2Marker);
 
     }
@@ -143,13 +146,83 @@ class Game {
         return true;
     }
 
+    Player getWinner() {
+        return this.winner;
+    }
 
     String checkState() {
-        if ( winner!=null ) {
-            return "WIN";
-        }
         
-        // game is either draw or continued.
+        // try to determine if the game is in a WIN state
+        
+        // 1. check all the rows
+        for ( int row = 0 ; row < 3 ; row++ ) {
+            char ch = this.board.getMarker(row,0);
+            if ( ch=='?' ) {
+                // we can skip this row
+                continue;
+            }
+            boolean win = true;
+            for ( int col = 1 ;col < 3 ; col++ ) {
+                if ( this.board.getMarker(row,col)!=ch ) {
+                    win = false;
+                    break;
+                }
+            }
+            if ( win ) {
+                return "WIN";
+            }
+        }
+
+        // 2. check all the cols
+        for ( int col = 0 ; col < 3 ; col++ ) {
+            char ch = this.board.getMarker(0,col);
+            if ( ch=='?' ) {
+                // we can skip this row
+                continue;
+            }
+            boolean win = true;
+            for ( int row = 1 ;row < 3 ; row++ ) {
+                if ( this.board.getMarker(row,col)!=ch ) {
+                    win = false;
+                    break;
+                }
+            }
+            if ( win ) {
+                return "WIN";
+            }
+        }
+
+        // 3. check the left diagonal
+        char leftDiagonalMarker = this.board.getMarker(0,0);
+        if ( leftDiagonalMarker!='?' ) {
+            // now you can evaluate the left diagonal
+            boolean win = true;
+            for ( int i = 1 ; i < 3 ; i++ ) {
+                if ( leftDiagonalMarker != this.board.getMarker(i,i) ) {
+                    win = false;
+                    break;
+                }
+            }
+            if ( win ) {
+                return "WIN";
+            }
+        }
+        // 4. check the right diagonal
+        char rightDiagonalMarker = this.board.getMarker(0,2);
+        if ( rightDiagonalMarker!='?' ) {
+            // now you can evaluate the left diagonal
+            boolean win = true;
+            for ( int i = 1 ; i < 3 ; i++ ) {
+                if ( rightDiagonalMarker != this.board.getMarker(i,2-i) ) {
+                    win = false;
+                    break;
+                }
+            }
+            if ( win ) {
+                return "WIN";
+            }
+        }
+
 
         // Try to check if any of the slots are empty or not
         for ( int i = 0; i < 3; i++ )
@@ -170,7 +243,8 @@ class TicTacToe {
     public static void main( String args[] ) {
         
         Scanner sc = new Scanner(System.in);
-        
+        Game newGame = new Game();
+        newGame.play();
 
     }
 
